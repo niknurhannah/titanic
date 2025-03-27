@@ -44,9 +44,6 @@ data.head()
 X = data.drop('Survived', axis=1)
 y = data['Survived']
 
-# Make predictions
-y_pred = model.predict(X_test)
-
 # Print evaluation metrics
 print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
 print("\nConfusion Matrix:")
