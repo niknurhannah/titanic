@@ -5,7 +5,7 @@ import numpy as np
 import streamlit as st
 
 
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
 # Load Titanic dataset
 url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
 data = pd.read_csv(url)
