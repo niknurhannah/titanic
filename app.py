@@ -44,10 +44,6 @@ data.head()
 X = data.drop('Survived', axis=1)
 y = data['Survived']
 
-# Train the model
-model = RandomForestClassifier(random_state=42)
-model.fit(X_train, y_train)
-
 # Make predictions
 y_pred = model.predict(X_test)
 
