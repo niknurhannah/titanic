@@ -1,10 +1,6 @@
 import pandas as pd
 import numpy as np
-
-
 import streamlit as st
-
-
 
 # Load Titanic dataset
 url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
@@ -28,14 +24,7 @@ data['Embarked'] = data['Embarked'].fillna(data['Embarked'].mode()[0])
 # Drop 'Cabin' column due to excessive missing values
 data.drop('Cabin', axis=1, inplace=True)
 # Survival rate by gender
-sns.barplot(x='Sex', y='Survived', data=data)
-plt.title('Survival Rate by Gender')
-plt.show()
 
-# Survival rate by class
-sns.barplot(x='Pclass', y='Survived', data=data)
-plt.title('Survival Rate by Class')
-plt.show()
 
 # Convert categorical columns to numerical
 data['Sex'] = data['Sex'].map({'male': 0, 'female': 1})
@@ -78,11 +67,6 @@ print(classification_report(y_test, y_pred))
 # Extract feature importances
 importances = model.feature_importances_
 features = X.columns
-
-# Plot feature importance
-sns.barplot(x=importances, y=features)
-plt.title('Feature Importance')
-plt.show()
 
 # Streamlit Web App for User Input and Predictions
 st.title("Titanic Survival Prediction")
