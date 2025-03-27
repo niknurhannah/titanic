@@ -44,10 +44,6 @@ data.head()
 X = data.drop('Survived', axis=1)
 y = data['Survived']
 
-# Extract feature importances
-importances = model.feature_importances_
-features = X.columns
-
 # Streamlit Web App for User Input and Predictions
 st.title("Titanic Survival Prediction")
 
