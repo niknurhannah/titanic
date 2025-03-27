@@ -44,13 +44,6 @@ data.head()
 X = data.drop('Survived', axis=1)
 y = data['Survived']
 
-# Print evaluation metrics
-print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
-print("\nConfusion Matrix:")
-print(confusion_matrix(y_test, y_pred))
-print("\nClassification Report:")
-print(classification_report(y_test, y_pred))
-
 # Extract feature importances
 importances = model.feature_importances_
 features = X.columns
