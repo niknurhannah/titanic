@@ -4,7 +4,7 @@ import numpy as np
 
 import streamlit as st
 
-from sklearn.ensemble import RandomForestClassifier
+
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 # Load Titanic dataset
 url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
