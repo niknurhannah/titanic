@@ -60,4 +60,4 @@ embarked = st.selectbox("Port of Embarkation (0 = C, 1 = Q, 2 = S)", [0, 1, 2])
 if st.button("Predict"):
     # Preprocess input data
     features = np.array([[pclass, sex, age, sibsp, parch, fare, embarked, sibsp + parch, int(sibsp + parch == 0)]])
-    st.write("Survived" if prediction[0] == 1 else "Did Not Survive")
+   
